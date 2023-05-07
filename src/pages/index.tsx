@@ -1,6 +1,7 @@
 import NavBar from "@/components/NavBar/NavBar";
 import { FaUser, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { AiOutlineGithub } from "react-icons/ai";
+import About from "@/components/About/About";
 
 export default function Home() {
   return (
@@ -18,7 +19,9 @@ export default function Home() {
           <div className="my-5 w-[2px] h-[150px] bg-gray-400 hover:bg-cyan-300"></div>
         </div>
         {/* main middle section */}
-        <div className="w-full md:w-[80vw] h-full  bg-pink-300">B</div>
+        <div className="w-full md:w-[80vw] h-full">
+          <About />
+        </div>
         {/* right fixed on md screens */}
         <div className="hidden md:flex flex-col justify-end items-center w-[100px] h-full  min-h-[90vh] fixed bottom-0 right-0 bg-transparent">
           <div className="text-gray-400 text-[12px] rotate-90 w-[300px] my-[20px] hover:text-cyan-300 ">
