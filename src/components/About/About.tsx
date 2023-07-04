@@ -1,7 +1,7 @@
-import React from "react";
-import Image from "next/image";
+import React from "react"
+import Image from "next/image"
 
-type Props = {};
+type Props = {}
 
 const About = (props: Props) => {
   return (
@@ -32,7 +32,7 @@ const About = (props: Props) => {
         <div className=" w-full sm:w-[50%] h-full flex justify-center items-center">
           <Image
             alt="emmanuel's picture"
-            src="/ope.jpg"
+            src="/ope.png"
             width={200}
             height={200}
             style={{ width: "65%", height: "65%", objectFit: "contain" }}
@@ -40,7 +40,7 @@ const About = (props: Props) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default About;
+export default About
