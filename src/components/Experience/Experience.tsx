@@ -42,7 +42,10 @@ const Experience = (props: Props) => {
           </div>
           {/* technologies */}
           <div className="w-full flex flex-wrap items-center">
-            {_tech && _tech.map((t) => <TechBadge name={t} />)}
+            {_tech &&
+              _tech.map((t, index: number) => (
+                <TechBadge key={index} name={t} />
+              ))}
           </div>
           {/* img */}
           <div className=" w-full h-fit my-2 flex justify-center items-center">
