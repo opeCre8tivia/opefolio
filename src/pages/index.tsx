@@ -2,6 +2,7 @@ import NavBar from "@/components/NavBar/NavBar";
 import { FaUser, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { AiOutlineGithub } from "react-icons/ai";
 import About from "@/components/About/About";
+import SectionTitle from "@/components/SectionTitle/SectionTitle";
 
 export default function Home() {
   return (
@@ -19,8 +20,14 @@ export default function Home() {
           <div className="my-5 w-[2px] h-[150px] bg-gray-400 hover:bg-cyan-300"></div>
         </div>
         {/* main middle section */}
-        <div className="w-full md:w-[80vw] h-full">
+        <div className="w-full md:w-[80vw] h-full flex flex-col justify-start">
           <About />
+
+          <SectionTitle title="Technologies and Tools" />
+          <SectionTitle title="Projects" />
+
+          {/* mobile navbar shadow component */}
+          <div className="h-[200px] w-full sm:hidden "></div>
         </div>
         {/* right fixed on md screens */}
         <div className="hidden md:flex flex-col justify-end items-center w-[100px] h-full  min-h-[90vh] fixed bottom-0 right-0 bg-transparent">

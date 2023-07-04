@@ -6,7 +6,7 @@ type Props = {};
 const About = (props: Props) => {
   return (
     <section>
-      <div className="w-full min-h-[80vh] sm:flex justify-center items-center p-10">
+      <div className="w-full min-h-[80vh] sm:h-fit sm:min-h-fit sm:flex justify-center items-start p-10">
         {/* texts */}
         <div className=" w-full sm:w-[50%] h-full">
           <p className="text-cyan-300 text-[12px]">Hi, my name is</p>
@@ -18,7 +18,7 @@ const About = (props: Props) => {
             I build things using code.
           </h1>
 
-          <div className="text-gray-500 text-[12px] my-[10px]">
+          <div className="text-gray-400 text-[12px] my-[10px]">
             I am a software engineer who loves building things for the web and
             mobile.I am always ready to take on new challenges because that is
             what has made me grow in knowledge and keeps me learning new

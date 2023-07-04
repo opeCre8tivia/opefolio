@@ -59,8 +59,7 @@ const NavBar = () => {
         </div>
 
         {/* mobile screen menu */}
-
-        <div className="w-full min-h-[60px] bg-teal-300 md:hidden absolute bottom-0 left-0 right-0 z-20"></div>
+        <div className="w-full h-[60px] bg-teal-300 sm:hidden absolute bottom-0 left-0 right-0 z-20"></div>
       </div>
     </nav>
   );
