@@ -1,8 +1,9 @@
-import NavBar from "@/components/NavBar/NavBar";
-import { FaUser, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { AiOutlineGithub } from "react-icons/ai";
-import About from "@/components/About/About";
-import SectionTitle from "@/components/SectionTitle/SectionTitle";
+import NavBar from "@/components/NavBar/NavBar"
+import { FaUser, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
+import { AiOutlineGithub } from "react-icons/ai"
+import About from "@/components/About/About"
+import SectionTitle from "@/components/SectionTitle/SectionTitle"
+import Experience from "@/components/Experience/Experience"
 
 export default function Home() {
   return (
@@ -23,8 +24,10 @@ export default function Home() {
         <div className="w-full md:w-[80vw] h-full flex flex-col justify-start">
           <About />
 
-          <SectionTitle title="Technologies and Tools" />
-          <SectionTitle title="Projects" />
+          <SectionTitle title="Experience" />
+          <Experience />
+
+          {/* <SectionTitle title="Projects" /> */}
 
           {/* mobile navbar shadow component */}
           <div className="h-[200px] w-full sm:hidden "></div>
@@ -38,5 +41,5 @@ export default function Home() {
         </div>
       </div>
     </main>
-  );
+  )
 }
