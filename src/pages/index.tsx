@@ -7,6 +7,8 @@ import SectionTitle from "@/components/SectionTitle/SectionTitle"
 import Experience from "@/components/Experience/Experience"
 import { ExperienceType } from "@/types/types"
 import data from "../data/experience.json"
+import Head from "next/head"
+import { spy } from "@/utils/getVisitorsInfo"
 
 export default function Home() {
   const [info, setInfo] = useState<ExperienceType[]>([])
@@ -17,8 +19,40 @@ export default function Home() {
     }
   }, [data])
 
+  useEffect(() => {
+    spy()
+  }, [])
+
   return (
     <main>
+      {/* SEO */}
+      <Head>
+        <title>Emmanuel Opel | Software Engineer</title>
+        <meta
+          name="description"
+          content="I am a software engineer with over 5 years of experience; I know how to building things using code"
+        />
+        <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+      </Head>
+
       {/* nav bar */}
       <NavBar />
       {/* section parent */}
