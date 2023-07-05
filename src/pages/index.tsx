@@ -1,11 +1,22 @@
+import React, { useState, useEffect } from "react"
 import NavBar from "@/components/NavBar/NavBar"
 import { FaUser, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"
 import { AiOutlineGithub } from "react-icons/ai"
 import About from "@/components/About/About"
 import SectionTitle from "@/components/SectionTitle/SectionTitle"
 import Experience from "@/components/Experience/Experience"
+import { ExperienceType } from "@/types/types"
+import data from "../data/experience.json"
 
 export default function Home() {
+  const [info, setInfo] = useState<ExperienceType[]>([])
+
+  useEffect(() => {
+    if (data) {
+      setInfo([...data])
+    }
+  }, [data])
+
   return (
     <main>
       {/* nav bar */}
@@ -25,7 +36,8 @@ export default function Home() {
           <About />
 
           <SectionTitle title="Experience" />
-          <Experience />
+          {info &&
+            info.map((i, index: number) => <Experience data={i} key={index} />)}
 
           {/* <SectionTitle title="Projects" /> */}
 

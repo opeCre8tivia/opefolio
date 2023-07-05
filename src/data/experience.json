@@ -1,0 +1,47 @@
+[
+  {
+    "period": "2022 - PRESENT",
+    "role": "Fullstack Mobile & Web Engineer GoldPOS | Hybrid",
+    "description": " GoldPOS is a point of sale system that runs on a tablet based android app and a web based backoffice. I worked with other team members to develope an MVP in the shortest time possible and because of the tight budget;I had to work on the Frontend,backend and on the android app",
+    "techList": [
+      "React Js",
+      "React Native",
+      "Express JS",
+      "TypeScript",
+      "Prisma",
+      "PostgreSql",
+      "Git & Gitlab"
+    ],
+    "img": "/pos.png",
+    "lessons": [
+      "Learnt how to connect react native app to a bluetooth printer and print",
+      "Developed a service to link android apps to specific accounts by simply scanning QR code",
+      "Learnt how to use Prisma ORM"
+    ],
+    "hasVidDemo": true,
+    "videoLink": "https://www.youtube.com/watch?v=r2sH8X-8sPU&t=2s",
+    "link": "http://goldpointofsale.com"
+  },
+  {
+    "period": "2021 - 2022 APRIL",
+    "role": "Lead Frontend Engineer Truedigital Technologies Zambia | Remote",
+    "description": "Contracted to work with other team members to develope an MVP for an internal system for the Public Health Department (PHD) of Lusaka. My role spanned from discussing Software Requirments (SRS), engaging the UI/UX designer to come up with an appropriate design to working with my frontend team to translate everything into code etc,",
+    "techList": [
+      "Jira",
+      "Figma",
+      "Next Js",
+      "React Native",
+      "Open street maps",
+      "Git & Gitlab"
+    ],
+    "img": "/phd.png",
+    "lessons": [
+      "Learnt how work with Open Street Maps",
+      "Was the first time using Next Js",
+      "Improved my React Native skills"
+    ],
+    "videoLink": "",
+    "hasVidDemo": false,
+    "link": "http://46.101.40.97:3000/auth/login"
+  }
+]

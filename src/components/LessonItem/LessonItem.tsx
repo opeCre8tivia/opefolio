@@ -7,7 +7,7 @@ type Props = {
 
 const LessonItem = ({ text }: Props) => {
   return (
-    <div className="w-full h-fit flex justify-center items-center">
+    <div className="w-full h-fit flex justify-start items-center">
       <div className="w-[30px] h-[30px] flex justify-center items-center mx-2">
         <FaCode color="#d9d9d9" size={20} />
       </div>

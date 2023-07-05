@@ -2,8 +2,14 @@ import React from "react"
 import TechBadge from "../TechBadge/TechBadge"
 import Image from "next/image"
 import LessonItem from "../LessonItem/LessonItem"
+import { ExperienceType } from "@/types/types"
 
-type Props = {}
+import { BsCaretRightSquare, BsArrowUpRightSquare } from "react-icons/bs"
+import Link from "next/link"
+
+type Props = {
+  data: ExperienceType
+}
 
 const _tech = [
   "React Js",
@@ -15,42 +21,38 @@ const _tech = [
   "Git & Gitlab",
 ]
 
-const Experience = (props: Props) => {
+const Experience = ({ data }: Props) => {
   return (
     <div className="w-full h-fit md:flex px-[20px] my-4">
       {/* period section */}
       <div className="mt-[12px] whitespace-nowrap mr-2 font-extrabold text-gray-400 text-[10px]">
-        2022 - PRESENT
+        {data.period}
       </div>
 
       {/* content */}
       <div className="w-full h-filt">
         {/* role section */}
         <div className="mt-[12px] font-bold text-gray-200 text-[14px]">
-          Fullstack Mobile & Web Engineer GoldPOS
+          {data.role}
         </div>
 
         {/* description and screen shot */}
         <div>
           {/* desc */}
           <div className="text-gray-400 text-[12px] my-[10px]">
-            GoldPOS is a point of sale system that runs on a tablet based
-            android app and a web based backoffice. I worked with other team
-            members to develope an MVP in the shortest time possible and because
-            of the tight budget;I had to work on the Frontend,backend and on the
-            android app
+            {data.description}
           </div>
           {/* technologies */}
           <div className="w-full flex flex-wrap items-center">
-            {_tech &&
-              _tech.map((t, index: number) => (
+            {data.techList &&
+              data.techList.map((t, index: number) => (
                 <TechBadge key={index} name={t} />
               ))}
           </div>
           {/* img */}
           <div className=" w-full h-fit my-2 flex justify-center items-center">
             <Image
-              src={"/pos.png"}
+              src={data.img}
               alt="project screen shot"
               width={400}
               height={300}
@@ -58,16 +60,36 @@ const Experience = (props: Props) => {
             />
           </div>
 
+          {/* demo or links */}
+          <div className="h-[60px] w-full flex items-center justify-start">
+            {data.hasVidDemo && (
+              <Link href={data.videoLink}>
+                <div className="w-[50px] h-[50px] flex items-center justify-center">
+                  <BsCaretRightSquare color="#f3f3f3" size={30} />
+                </div>
+              </Link>
+            )}
+
+            {data.link.length > 0 && (
+              <Link href={data.link}>
+                <div className="w-[50px] h-[50px] flex items-center justify-center">
+                  <BsArrowUpRightSquare color="#f3f3f3" size={30} />
+                </div>
+              </Link>
+            )}
+          </div>
+
           {/* roles */}
 
-          <div className="mt-4 mb-1 font-extrabold text-gray-400 text-[10px]">
+          <div className="mt-10 mb-4 font-extrabold text-gray-400 text-[18px] underline decoration-double py-2">
             Notable Lessons Learnt
           </div>
 
-          <div>
-            <LessonItem text="Learnt how to connect react native app to a bluetooth printer and print" />
-            <LessonItem text="Learnt how to connect react native app to a bluetooth printer and print" />
-            <LessonItem text="Learnt how to connect react native app to a bluetooth printer and print" />
+          <div className="w-full flex flex-col items-start justify-start">
+            {data.lessons &&
+              data.lessons.map((lesson, index: number) => (
+                <LessonItem text={lesson} key={index} />
+              ))}
           </div>
 
           {/*  */}
