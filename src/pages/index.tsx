@@ -20,7 +20,7 @@ export default function Home() {
   }, [data])
 
   useEffect(() => {
-    spy()
+    // spy()
   }, [])
 
   return (
