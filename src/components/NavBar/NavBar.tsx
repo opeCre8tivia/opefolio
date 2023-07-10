@@ -1,10 +1,10 @@
-import Image from "next/image";
-import MenuItem from "../MenuItem/MenuItem";
+import Image from "next/image"
+import MenuItem from "../MenuItem/MenuItem"
 
 export interface NavBarLink {
-  name: string;
-  href: string;
-  prefix: string;
+  name: string
+  href: string
+  prefix: string
 }
 
 const NavBar = () => {
@@ -35,7 +35,7 @@ const NavBar = () => {
       href: "#",
       prefix: "05",
     },
-  ];
+  ]
 
   return (
     <nav>
@@ -54,15 +54,12 @@ const NavBar = () => {
         <div className="hidden w-fit md:flex justify-between items-center">
           {navBarLinks &&
             navBarLinks.map((item, index: number) => {
-              return <MenuItem key={index} item={item} />;
+              return <MenuItem key={index} item={item} />
             })}
         </div>
-
-        {/* mobile screen menu */}
-        <div className="w-full h-[60px] bg-teal-300 sm:hidden absolute bottom-0 left-0 right-0 z-20"></div>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar

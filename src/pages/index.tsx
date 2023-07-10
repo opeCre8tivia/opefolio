@@ -76,7 +76,13 @@ export default function Home() {
           {/* <SectionTitle title="Projects" /> */}
 
           {/* mobile navbar shadow component */}
-          <div className="h-[200px] w-full sm:hidden "></div>
+          <div className="min-h-[60px] w-full sm:hidden "></div>
+          {/* mobile screen menu */}
+          <div className="w-full h-[50px] min-h-[50px] flex justify-between items-center  bg-white fixed bottom-0 left-0 right-0  sm:hidden px-10 z-20">
+            <FaGithub className="text-gray-400 text-[30px] my-1 hover:text-cyan-300" />
+            <FaTwitter className="text-gray-400 text-[30px] my-1 hover:text-cyan-300" />
+            <FaLinkedin className="text-gray-400 text-[30px] my-1 hover:text-cyan-300" />
+          </div>
         </div>
         {/* right fixed on md screens */}
         <div className="hidden md:flex flex-col justify-end items-center w-[100px] h-full  min-h-[90vh] fixed bottom-0 right-0 bg-transparent">
